@@ -144,7 +144,7 @@ AC_CXX_STL_HASH
 #   too.
 export CFLAGS
 export CXXFLAGS
-AC_CONFIG_SUBDIRS([gtest])
+AC_CONFIG_SUBDIRS([gmock])
 
 AC_CONFIG_FILES([Makefile src/Makefile protobuf.pc protobuf-lite.pc])
 AC_OUTPUT

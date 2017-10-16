@@ -17,8 +17,9 @@ DIST_SUBDIRS = $(subdirs) src
 # want "make install" to recurse into gtest since we don't want to overwrite
 # the installed version of gtest if there is one.
 check-local:
-	@echo "Making lib/libgtest.a lib/libgtest_main.a in gtest"
-	@cd gtest && $(MAKE) $(AM_MAKEFLAGS) lib/libgtest.la lib/libgtest_main.la
+	@echo "Making lib/libgmock.a lib/libgmock_main.a in gmock"
+	@cd gmock && $(MAKE) $(AM_MAKEFLAGS) lib/libgmock.la lib/libgmock_main.la
+	@cd gmock/gtest && $(MAKE) $(AM_MAKEFLAGS) lib/libgtest.la lib/libgtest_main.la
 
 # We would like to clean gtest when "make clean" is invoked.  But we have to
 # be careful because clean-local is also invoked during "make distclean", but
